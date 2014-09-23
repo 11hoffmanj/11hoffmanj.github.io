@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Garza Case Study: Jared Hoffman Portfolio</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+    <link rel="stylesheet/less" type="text/css" href="css/style-case-study.less" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+	<script src="css/LESS.js" type="text/javascript"></script>
+    <script src="js/jquery.fittext.js"></script>
+        <script src="js/hoverintent.js"></script>
+	<script src="js/jquery.scrollorama.js"></script>
+	<script>
+	$(document).ready(function(){
+		$(".logline").fitText(1.4);
+		
+		var scrollorama = $.scrollorama({
+			blocks:'.block',
+			enablePin:false
+		});
+		scrollorama.onBlockChange(function() {
+		});
+		scrollorama
+			.animate('.fifth',{duration: 500, property:'height', start:20, end:800, delay:600})
+		/*
+		$('body').on('click','#tb1',function() {
+			if ($(this).attr('src') === 'images/t-businesscard1.png'){$(this).attr('src','images/t-businesscard2.png');	}
+			else{	$(this).attr('src','images/t-businesscard1.png');}
+		});
+
+		*/
+		$('.liney').parent().addClass("header-spacer");
+		
+		$('.study-nav').hoverIntent(function(){
+			$(this).animate({width: "130px"}, 300);
+			$(this).children().fadeIn().css({display: "block"});
+		}, function(){
+			$(this).animate({width: "30px"}, 300);
+			$(this).children().css({display: "none"});
+		});
+
+		
+		});
+    </script>
+</head>
+
+<body>
+  	<header>
+    	<div class="navbar target container-fluid">
+            <div class="nav-inner row-fluid">
+                <div class="span12">
+                <a href="index.html"><img src="images/branding.png" id="branding"></a>
+                <ul class="nav">
+                    <li class="word-nav"><a href="index.html#two">WORK</a></li>
+                    <li class="study-nav1"><a href="tooskee.html" class="study-nav" id="tooskee-nav"><span>TOOSKEE</span></a></li>
+                    <li class="study-nav1"><a href="microgifts.html" class="study-nav" id="microgifts-nav"><span>MICROGIFTS</span></a></li>
+                    <li class="study-nav1"><a href="garza.html" class="study-nav" id="garza-nav"><span>GARZA</span></a></li>
+                    <li class="study-nav1"><a href="cornellious.html" class="study-nav" id="corn-nav"><span>CORNELLIOUS</span></a></li>
+                <li><a href="index.html#six">CV + CONTACT</a></li>
+                </ul>
+                </div>
+            </div>
+   		</div>
+    </header>
+
+<div class="container-fluid full">
+
+	<div class="block block-garza1">
+	<div class="row-fluid garza-head">
+    	<div class="garza-words">
+			<img src="images/garza/g-top.png" alt="Garza Background" id="g-top">
+            <img src="images/garza/headwords.png" alt="Garza" id="g-words">
+        </div>
+    </div>
+        <div class="row-fluid">
+        	<div class="span6 offset3 visit">
+            	<h5><span><a href="http://www.cornellious.com/garza" target="_blank">See the Live Template</a></span></h5>
+            </div>
+        </div>
+
+        
+    <div class="row-fluid">
+    	<div class="span10 offset1">
+            <div class="row-fluid">
+                <div class="span8 offset2 description">
+                    <h2>The Project</h2>
+                    <p class="about">Garza is a Wordpress theme designed for a friend of mine, Maria, who is a model and rock climbing enthusiast from Venezuela. She's travelled all over the world for modeling, and wanted a blog to document her adventures. I discussed much with Maria -- about thin lines, light colors, and more -- and this motivated many choices that went into the final product. When it was all said and done, Garza came out to be a feminine, vivacious and youthful design. Take a look!</p>
+                </div>
+             </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="block block-garza2">
+    <div class="row-fluid">
+    	<div class="span10 offset1">
+            <h3 class="liney"><span>Lovely Lights</span></h3>
+            <p class="subtitle">Color scheme sets the tone for design. Garza is feminine, and it starts with the colors. The three main colors are a lightened triad of primaries: pink, light blue, and yellow. The resultant? A light and lovely scheme that establishes a feeling of vibrance, elegance, and youth.</p>
+        </div>
+    </div>
+    <div class="row-fluid">
+    	<div class="span12">
+        	<div class="row-fluid fifth">
+            	<div class="one"></div>
+                <div class="two"></div>
+            	<div class="three"></div>
+            	<div class="four"></div>
+            	<div class="five"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div class="span10 offset1">
+            <h3 class="liney"><span>Sharp Typography</span></h3>
+            <p class="subtitle">For a font, I wanted something delicate, readable, and still funky. Rawengulk turned up; with its thin lines and tight serif indications, it  perfectly mirrored the cutting strength of a climber and the elegance of a model.</p>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+    	<div class="span8 offset2">
+        	<div class="subtitle">
+        <img src="images/garza/raw1.png" alt="Rawengulk" width="720" height="auto" style="margin:40px 0px 10px 0px;">
+        <img src="images/garza/raw2.png" alt="Rawengulk 2" width="720" height="auto" style="clear:both;">
+        </div>
+    </div>    
+    </div>
+    
+    <div class="block block-garza3">
+        <div class="row-fluid">
+    	<div class="span10 offset1">
+            <h3 class="liney"><span>Screencaps</span></h3>
+            <p class="subtitle">After a week or so of coding, Garza came out great! <a href="http://cornellious.com/garza" target="_blank">Visit the site</a> to see the entire project.</p>
+        </div>
+    </div>
+    
+   <div class="row-fluid">
+   <div class="span10 offset1 images">
+            <img src="images/garza/g-ss1.png" alt="Garza SS1" class="yes-shadow yes-border">
+            <div class="row-fluid">
+            	<div class="span10 offset1">
+                    <p class="caption">Home Page. </p>
+                </div>
+            </div>
+   </div>
+   </div>     
+    
+    <div class="row-fluid">
+    <div class="span10 offset1 images">
+        <img src="images/garza/g-ss3.png" alt="Garza SS3" class="yes-shadow yes-border">
+        <div class="row-fluid">
+            <div class="span10 offset1">
+                <p class="caption">Menu Details and Footer. </p>
+            </div>
+        </div>
+    </div>
+    </div>
+        
+    <div class="row-fluid">
+       <div class="span10 offset1 images">
+            <img src="images/garza/g-ss2.png" alt="Garza SS2" class="yes-shadow yes-border">
+            <div class="row-fluid">
+            	<div class="span10 offset1">
+                    <p class="caption">Comments and Discussion. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div class="span12 footer">
+            <div class="text">
+            	<h4>GARZA</h4>
+                 <h3>That's all she wrote!</h3>
+            </div>
+
+        	<div class="nav-foot">
+                <a href="microgifts.html" class="prev-foot">Previous</a>
+           	 	<a href="cornellious.html" class="next-foot">Next</a>
+            </div>
+   		</div>
+    </div>
+
+     
+    </div>
+
+</div>

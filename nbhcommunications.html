@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>NBH Communications Case Study</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+    <link rel="stylesheet/less" type="text/css" href="css/style-case-study.less" />
+    <script src="http://code.jquery.com/jquery.js"></script>
+	<script src="css/LESS.js" type="text/javascript"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/jquery.scrollorama.js"></script>
+	<script>
+	$(document).ready(function(){
+		$(".logline").fitText(1.4);
+		
+		var scrollorama = $.scrollorama({
+			blocks:'.block',
+			enablePin:false
+		});
+		scrollorama.onBlockChange(function() {
+		});
+		/*scrollorama
+			.animate('#tooskee-logo1',{duration: 300, property:'left', start:600, end:0, delay:200})
+		
+		$('body').on('click','#tb1',function() {
+			if ($(this).attr('src') === 'images/t-businesscard1.png'){$(this).attr('src','images/t-businesscard2.png');	}
+			else{	$(this).attr('src','images/t-businesscard1.png');}
+		});
+
+		*/
+		
+		});
+    </script>
+
+</head>
+
+<body>
+<div class="container-fluid full">
+
+	<div class="block block1">
+	<div class="row-fluid nbh-head">
+    	<div class="span10 offset1">
+        	<h1>NBH Communications</h1>
+            <p class="logline" style="display:block">nbh communications.</p>
+        </div>
+    </div>
+    
+    <div class="row-fluid nbh-head">
+    	<div class="span10 offset1">
+        <img src="images/nbh/back.png" alt="NBH Communications Business Card Back" width="500px" height="auto">
+        </div>
+    </div>
+    
+    <div class="row-fluid nbh-head">
+    	<div class="span10 offset1">
+            <div class="row-fluid description">
+                <div class="span8">
+                    <h2>The Project</h2>
+                    <p class="about">Tooskee is an early-stage startup aiming to revolutionize food management. Although mobile technology has reshaped nearly every aspect of our daily lives, we've yet to digitize the kitchen. We make too much pasta; we toss away the leftovers. Waste entire loafs of bread. And we rely on take-out meals that are not part of a sound meal planning system - not to mention a healthy diet. All told, an average family of four in America loses $1600 to food waste. Enter: Tooskee! Tooskee is your smart home food management system. By managing food inventory and offering ways to improve habits, it transforms your kitchen into an environmentally sustainable and cost-effective culinary space!</p>
+                </div>
+                <div class="span4">
+                    <h2>My Slice</h2>
+					<p class="role">I designed the business cards and collabed with my mama to make them great!</p>
+                </div>
+             </div>
+        </div>
+    </div>
+    </div>

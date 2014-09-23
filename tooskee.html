@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tooskee Case Study: Jared Hoffman Portfolio</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+    <link rel="stylesheet/less" type="text/css" href="css/style-case-study.less" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="css/LESS.js" type="text/javascript"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/jquery.scrollorama.js"></script>
+	<script src="js/hoverintent.js"></script>
+    
+	<script>
+	$(document).ready(function(){
+		$(".logline").fitText(1.4);
+		
+		$('body').on('click','#tb1',function() {
+			if ($(this).attr('src') === 'images/t-businesscard1.png'){$(this).attr('src','images/t-businesscard2.png');	}
+			else{	$(this).attr('src','images/t-businesscard1.png');}
+		});
+
+		var scrollorama = $.scrollorama({
+			blocks:'.block',
+			enablePin:false
+		});
+		scrollorama.onBlockChange(function() {
+		});
+    	scrollorama
+			.animate('#tooskee-logo1',{duration: 300, property:'left', start:600, end:0, delay:200})
+			.animate('#tb1',{duration: 300, property:'left', start:500, delay:900})	
+			.animate('#tooskee-app',{duration: 300, property:'right', start:500, end:0, delay:300})
+
+		$('.liney').parent().addClass("header-spacer");
+		
+		$('.study-nav').hoverIntent(function(){
+			$(this).animate({width: "130px"}, 300);
+			$(this).children().fadeIn().css({display: "block"});
+		}, function(){
+			$(this).animate({width: "30px"}, 300);
+			$(this).children().css({display: "none"});
+		});
+
+
+	});
+    </script>
+</head>
+
+<body>
+  	<header>
+    	<div class="navbar target container-fluid">
+            <div class="nav-inner row-fluid">
+                <div class="span12">
+                <a href="index.html"><img src="images/branding.png" id="branding"></a>
+                <ul class="nav">
+                    <li class="word-nav"><a href="index.html#two">WORK</a></li>
+                    <li class="study-nav1"><a href="tooskee.html" class="study-nav" id="tooskee-nav"><span>TOOSKEE</span></a></li>
+                    <li class="study-nav1"><a href="microgifts.html" class="study-nav" id="microgifts-nav"><span>MICROGIFTS</span></a></li>
+                    <li class="study-nav1"><a href="garza.html" class="study-nav" id="garza-nav"><span>GARZA</span></a></li>
+                    <li class="study-nav1"><a href="cornellious.html" class="study-nav" id="corn-nav"><span>CORNELLIOUS</span></a></li>
+                    <li><a href="index.html#six">CV + CONTACT</a></li>
+                </ul>
+                </div>
+            </div>
+   		</div>
+    </header>
+
+<div class="container-fluid full tk">
+
+	<div class="block block1">
+	<div class="row-fluid tooskee-head">
+    	<div class="span12">
+        <h1>Tooskee</h1>
+        	<img src="images/tooskee-logo.png" alt="Tooskee">
+            <p class="logline" style="display:block">DIGITIZE YOUR KITCHEN.</p>
+        </div>
+    </div>
+    <div class="row-fluid tooskee-head tooskee-head2">
+    	<div class="span10 offset1">
+            <div class="row-fluid description">
+                <div class="span8">
+                    <h2>The Project Scoop</h2>
+                    <p class="about">Tooskee is an early-stage startup aiming to revolutionize food management. Although mobile technology has reshaped nearly every aspect of our daily lives, we've yet to digitize the kitchen. We make too much pasta; we toss away the leftovers. Waste entire loafs of bread. And we rely on take-out meals that are not part of a sound meal planning system - not to mention a healthy diet. All told, an average family of four in America loses $1600 to food waste. Enter: Tooskee! Tooskee is your smart home food management system. By managing food inventory and offering ways to improve habits, it transforms your kitchen into an environmentally sustainable and cost-effective culinary space!</p>
+                </div>
+                <div class="span4">
+                    <h2>My Slice</h2>
+					<p class="role">I <b>co-founded</b> Tooskee with Jade Proulx, a master's student in Food Science at Cornell, in the Spring of 2013. I've been the creative lead, designing the early stage <b>app interface</b> and <b>branding</b>. Right now, we're seeking funding and building a prototype. We're excited for what's next for Tooskee!</p>
+                </div>
+             </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="row-fluid tooskee1">
+    	<div class="span10 offset1">
+                <h3 class="liney"><span>Professionally yummy</span></h3>
+        </div>
+    </div>
+
+    <div class="block block2">
+        <div class="row-fluid">
+        	<div class="span4 offset3 spacer5"><h4><span>Simplicity All Over</span></h4><p class="desc">An efficient and user-friendly kitchen database is perfect for young, tech-savvy professionals. For Tooskee's strawberry, I set out to marry motifs of techie innovation with comfortable, familial food imagery. I decided to riff on flat design to give it a modern, simple look.</p></div>
+            <div class="span4 logo"><img src="images/tooskee-logo2.png" alt="Tooskee Strawberry" id="tooskee-logo1"></div>
+        </div>
+    </div>
+    
+    
+    <div class="block block3">
+        <div class="tooskee-app">
+        <div class="row-fluid spacer10">
+                <div class="span4 offset1"><img src="images/tooskee/ss1.png" alt="Tooskee Screenshot" id="tooskee-app"></div>        
+                <div class="span4 left50"><h4><span>Scrumptiously Modern</span></h4><p class="desc">
+                Tooskee's aesthetic makes judicious use of white space, fruity colors, thin typefaces, and pull-out navigation. I banked on swiping gestures playing a large role in the organization of the "virtual kitchen" rather than more traditional menu based interfaces. In many ways the design of this App was informed by the stylistic choices of iOS 7. </p></div>
+        </div>
+        </div>
+
+
+        <div class="row-fluid spacer10">
+            <div class="span4 offset2"><h4><span>Trading Cards</span></h4><p class="desc">We were recently invited to take part in the Thought for Food Summit in Berlin, in September 2013. We networked with some of the top activists and shakers in the world of food security -- from the scientist who has grown the first in vitro meat to vertical farming enthusiasts. All were supportive of Tooskee and its mission: to eliminate food waste by creating value for every day folks.</p></div>
+            <div class="span4 bcard">
+                <img src="images/t-businesscard1.png" alt="Tooskee Business Card Front" class="half-width-image" id="tb1">
+                <p>Click to see my behind! Oh, I'm so dirty!</p>
+            </div>
+        </div>
+   	</div>
+    
+    <div class="row-fluid tooskee2">
+    	<div class="span10 offset1">
+                <h3 class="liney"><span>The Pitch</span></h3>
+            <p class="subtitle">Here's a little more information about Tooskee.</p>
+        </div>
+    </div>
+    <div class="row-fluid">
+    	<div class="span12 videoWrapper">
+        <iframe class="youtube-player" type="text/html" width="640px" height="385px" src="http://www.youtube.com/embed/MtWa9sBSmXY" allowfullscreen frameborder="0">
+		</iframe>
+        </div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div class="span12 footer">
+            <div class="text">
+            	<h4>TOOSKEE</h4>
+                 <h3>That's all folks!</h3>
+            </div>
+
+        	<div class="nav-foot">
+           	 	<a href="microgifts.html" class="next-foot">Next</a>
+            </div>
+   		</div>
+    </div>
+
+</div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-47495926-1', 'jaredehoffman.com');
+      ga('send', 'pageview');
+
+    </script>
+
+</body>
+</html>

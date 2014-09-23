@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/*Setup --------------------------------------------- */
+
+.container, .container-fluid{
+	margin:0 auto;
+	max-width:100%;
+}
+
+.one, .two, .three{
+	height:auto;
+	min-height:100%;
+}
+.three{
+	background-color:#cd4952;
+	color:white;
+}
+
+body, html{
+	height:100%;
+}
+
+.quote{
+	color:#b4c4d4;
+	font-size:1.4em;
+	line-height:150%;
+	font-family:'Helvetica Neau', 'Helvetica', Arial, sans-serif;
+	@media (max-width:340px){
+		font-size:1em;	
+	}
+}
+
+h1{
+	font-size:56px;
+	line-height:1;
+}
+
+/*Navbar --------------------------------- */
+
+header{
+	/*height:50px;*/
+}
+.navbar{
+	position: fixed;
+	z-index: 10;
+	height: 60px;
+	width:100%;	
+	background-color: rgba(240, 247, 251, 0.8);
+}
+
+.navbar-inner {
+	width: 1200px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px 0px 0px 0px;
+}
+.nav li {
+    display: inline-block;
+	line-height:100%;
+    margin-left: 50px;
+}
+.brand span {
+    margin-left: 50px;
+    padding-left: 10px;
+}
+.nav li > a, .brand span{
+	line-height:100%;	
+	color: #2E2E2E;
+	font-size: 1.1em;
+}
+.active > a{
+    color: #27AAE1 !important;
+}
+
+.brand {
+    display: inline-block;
+    float: left;
+    line-height: 50px;
+	overflow:hidden;
+	background:url(../images/logo-inside.png);
+    background-size: 35px 35px;
+	background-position:7px 7px;
+    background-repeat:no-repeat;
+}
+.brand:hover{
+    
+}
+.nav {
+    float: right;
+    margin:0;
+	padding:1em;
+	height:100%;
+}
+
+/* Home Page ------------------------ */
+.detail{
+	text-align:center;
+	line-height:normal;
+	font-family:'myriad-pro',MyriadPro,'Myriad Pro','Open Sans','Helvetica Neue',Helvetica,sans-serif;
+	font-weight:300;
+}
+
+.one{
+	background-color:#ebeff2;
+}
+
+.one .detail{
+	margin-top:200px;
+	margin-bottom:250px;
+}
+
+.one .detail img{
+	display:block;
+	margin:auto;
+	width:125px;
+	height:125px;
+}
+.one .detail p{
+	margin-top:40px;
+	color:#25aae1;
+	font-size:36px;
+}
+.jared {
+    margin-top: 200px;
+    height: auto;
+    max-width: 90%;
+}
+.span10.offset1.home-content {
+    height: 100%;
+}
+
+/* Case Studies --------------------------- */
+.visit-btn{
+	font-size:.4em;
+	font-weight:100;
+	color:white;
+	display:inline-block;
+	padding:8px 35px;
+	line-height:200%;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	transition: border 1s ease;
+	border:1px solid rgba(255, 255, 255, .2);
+}
+.visit-btn:hover{
+	border:1px solid rgba(255, 255, 255, .8);
+	color:white;
+	text-decoration:none;
+}
+
+.two{
+	background-color:#96d37f;
+}
+.two .detail{
+	margin-top:150px;
+	margin-bottom:100px;	
+}
+.two .detail img{
+	width:300px;
+	height:300px;
+	display:block;
+	margin:auto;	
+}
+.two .detail p{
+	font-size:3em;
+	font-weight:300;
+	color:white;	
+}
