@@ -1,0 +1,108 @@
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<!-- Load the d3 library. -->
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<style>
+/* put a border around the svg element so we can see the coordinate system better. */
+body { font-family: "Open Sans"; } div { margin: 30px; }
+svg { border: solid black 1px; }
+/* The default styles for axis elements stink. What should they be? */
+.axis path {}
+.axis line {}
+</style>
+</head>
+<body>
+
+<h3>Picnic Health Pill creator.</h3>
+
+<!-- The SVG element will go in here -->
+<div id="canvas"></div>
+
+<form name="f">
+Choose a color:
+<select id="color">
+	<option value="teal">teal</option>
+	<option value="#800000">red</option>
+	<option value="#3333FF">blue</option>
+	<option value="grey">grey</option>
+	<option value="orange">orange</option>
+	<option value="purple">purple</option>
+<select/>
+
+<br />
+Choose a shape:
+<select id="shape">
+<option value="circle">circle</option>
+<option value="oblong">oblong</option>
+</select>
+<br />
+First letter (just one letter please):
+<input id="letter" type="text" value="a" />
+
+</form>
+<br />
+<button onclick="makeSvg()">Click here to create the Pill</button>
+
+<script>
+var counter = 0;
+
+function makeSvg(){
+	var pill = {color:document.getElementById("color").value,
+				shape:document.getElementById("shape").value,
+				letter:document.getElementById("letter").value,
+				r:15
+				}
+
+	var p_color =  document.getElementById("color").value;
+	if (pill.shape === "circle"){
+		svg.append("ellipse")
+			.attr("cx",50+counter*60)
+			.attr("cy",50)
+			.attr("rx",pill.r*1.5)
+			.attr("ry",pill.r*1)
+			.attr("fill",pill.color);
+		svg.append("text")
+			.attr("fill","white")
+			.attr("x",50+counter*60)
+			.attr("y",50)
+			.attr("alignment-baseline","middle")
+			.attr("text-anchor","middle")
+			.text(pill.letter);
+		}
+	if (pill.shape === "oblong"){
+		svg.append("circle")
+			.attr("cx",50+counter*60)
+			.attr("cy",30)
+			.attr("r",pill.r*1)
+			.attr("fill",pill.color);
+		svg.append("circle")
+			.attr("cx",50+counter*60)
+			.attr("cy",60)
+			.attr("r",pill.r*1)
+			.attr("fill",pill.color);
+		svg.append("rect")
+			.attr("fill",pill.color)
+			.attr("width",pill.r*2)
+			.attr("height",pill.r*2)
+			.attr("x",50+counter*60-pill.r)
+			.attr("y",30);
+		svg.append("text")
+			.attr("fill","white")
+			.attr("x",50+counter*60)
+			.attr("y",50)
+			.attr("alignment-baseline","middle")
+			.attr("text-anchor","middle")
+			.text(pill.letter);
+
+	}
+	counter++;
+}
+var svg = d3.select("#canvas").append("svg").attr("height", 100).attr("width", 600);
+
+
+</script>
+
+
+</body>
+</html>
