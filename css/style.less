@@ -303,7 +303,6 @@ a:hover{
 	padding:5px 35px;
 	line-height:200%;
 	/*font-family: 'Permanent Marker', cursive;*/
-	.border-radius(0px);
 	
 	@media (max-width: 720px){
 		font-size:10pt;
@@ -345,21 +344,17 @@ a:hover{
 	.visit-btn{
 		color:@tooskee-red;
 		border:5px solid @tooskee-red;
+		background-color:white;
 		.transition(border .5s ease, color .5s ease, background-color .5s ease);
 
 		&:hover{
-			border:5px solid rgba(255, 255, 255, .8);
-			color:rgba(255, 255, 255, 1);
+			border:5px solid white;
+			color:white;
 			background-color:@tooskee-red;
 		}
-		@media (max-width: 720px){
-			color:@tooskee-red;	
-		}
 	}
-
-
-	
 }
+
 .three{
 	background-color:#F3F3F3;
 	img{
@@ -387,6 +382,7 @@ a:hover{
 		}
 	}
 }
+
 .four{
 	background-color:@g-light-blue;
 	
@@ -423,9 +419,9 @@ a:hover{
 		.transition(border .5s ease, color .5s ease, background-color .5s ease);
 
 		&:hover{
-		color:@g-blue;
-		border:5px solid @g-blue;
-		background-color:@g-yellow;
+			color:@g-blue;
+			border:5px solid @g-blue;
+			background-color:@g-yellow;
 		}
 	}
 
@@ -456,13 +452,13 @@ a:hover{
 	.visit-btn{
 		margin-top:50px;
 		color:#F2191F;
-		background-color:white;
+		background-color:#fff;
 		border:5px solid #F2191F;
 		.transition(border .5s ease, color .5s ease, background-color .5s ease);
 		&:hover{
-			color:white;
+			color:#fff;
 			background-color:#F2191F;
-			border:5px solid white;
+			border:5px solid #fff;
 		}
 
 		@media (max-width:720px){
