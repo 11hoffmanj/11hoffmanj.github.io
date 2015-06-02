@@ -36,6 +36,7 @@
 	font-family:"Track";
 	src: url('fonts/Track.ttf');
 }
+font-family: 'Permanent Marker', cursive;
 
 
 /*Mixins*/
@@ -297,31 +298,18 @@ a:hover{
 	font-weight:300;
 }
 .visit-btn{
-	font-size:1.2em;
-	font-weight:100;
-	color:white;
+	font-size:1.5em;
+	font-weight:400;
 	display:inline-block;
 	padding:5px 35px;
 	line-height:200%;
-	.border-radius(5px);
-	.transition(border 1s ease);
-	border:1px solid rgba(255, 255, 255, .3);
-	
-	&:hover{
-		border:1px solid rgba(255, 255, 255, .9);
-		text-decoration:none;
-	}
+	font-family: 'Permanent Marker';
+	.border-radius(0px);
 	
 	@media (max-width: 720px){
 		font-size:10pt;
 		padding:2px 20px;
-		background-color:white;
 	}
-}
-.cornellious .visit-btn {
-	@media (max-width:320px){
-		color:@corn-red;	
-	}	
 }
 
 .two, .three, .four, .five{
@@ -356,17 +344,17 @@ a:hover{
 		}
 	}
 	.visit-btn{
-		color:rgba(255, 255, 255, .8);
-		border:1px solid rgba(255, 255, 255, .4);
-		.transition(border 1s ease, color 1s ease);
+		color:@tooskee-red;
+		border:5px solid @tooskee-red;
+		.transition(border .5s ease, color .5s ease, background-color .5s ease);
 
 		&:hover{
-			border:1px solid rgba(255, 255, 255, .8);
+			border:5px solid rgba(255, 255, 255, .8);
 			color:rgba(255, 255, 255, 1);
-			text-decoration:none;
+			background-color:@tooskee-red;
 		}
 		@media (max-width: 720px){
-			color:@tooskee-green;	
+			color:@tooskee-red;	
 		}
 	}
 
@@ -388,14 +376,15 @@ a:hover{
 		color:rgb(73, 73, 73);	
 	}
 	.visit-btn{
-		color:#9B9B9B;
-		border:1px solid rgba(0, 0, 0, .1);
-		.transition(border 1s ease, color 1s ease);
+		color:#fff;
+		border:5px solid #fff;
+		background-color: rgba(0,0,0,.6);
+		.transition(border .5s ease, color .5s ease, background-color .5s ease);
 
 		&:hover{
-			border:1px solid rgba(0, 0, 0, .4);
-			color:rgb(73, 73, 73);
-			text-decoration:none;
+			border:5px solid rgba(0, 0, 0, .6);
+			color:rgba(0,0,0,.6);
+			background-color:#fff;
 		}
 	}
 }
@@ -429,14 +418,15 @@ a:hover{
 		}
 	}
 	.visit-btn{
-		color:rgba(0,0,0,.5);
-		border:1px solid rgba(0, 0, 0, .1);
-		.transition(border 1s ease, color 1s ease);
+		color:@g-yellow;
+		border:5px solid @g-yellow;
+		background-color:@g-blue;
+		.transition(border .5s ease, color .5s ease, background-color .5 ease);
 
 		&:hover{
-		border:1px solid rgba(0, 0, 0, .4);
-		color:rgba(0,0,0,.8);
-		text-decoration:none;
+		color:@g-blue;
+		border:5px solid @g-blue;
+		background-color:@g-yellow;
 		}
 	}
 
@@ -466,19 +456,18 @@ a:hover{
 	}
 	.visit-btn{
 		margin-top:50px;
-		color:rgba(255, 255, 255, .7);
-		.transition(border 1s ease, color 1s ease);
+		color:#F2191F;
+		background-color:white;
+		border:5px solid #F2191F;
+		.transition(border .5s ease, color .5s ease, background-color .5s ease);
 		&:hover{
-			color:rgba(255, 255, 255, 1);
-			text-decoration:none;
+			color:white;
+			background-color:#F2191F;
+			border:5px solid white;
 		}
 
 		@media (max-width:720px){
 			margin-top:10px;
-			color:#771013;
-			&:hover{
-				color:#5b1012;	
-			}
 		}
 	}
 }
