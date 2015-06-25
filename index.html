@@ -15,8 +15,8 @@
     
     <script src="js/jquery.scrollorama.js"></script>
     <script src="js/hoverintent.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/smoothscroll.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -32,7 +32,29 @@
 
     <body data-spy="scroll" data-target=".navbar">
     <script>
-	$(document).ready(function(){			
+	$(document).ready(function(){
+        function setHeight(){
+            $h = $('#icecream').height();
+            $wh = $(window).height();
+            $winWidth = $(window).width();
+            console.log($h+" and "+$wh);
+
+            if ($winWidth < 600){
+                $('#icecream').height($wh/1.7);
+                $('#icecream').css({'top' : '100px'});
+            }
+            else{
+                if ($h >= $wh){
+                    $('#icecream').height($wh + 100);
+                }
+
+                if ($wh > $h){
+                    $('#icecream').css({'top' : (($wh-$h) / 2)+'px'});
+                }
+            }
+
+        }
+        setHeight();
 		
 		var scrollorama = $.scrollorama({
 			blocks:'.block',
@@ -45,6 +67,7 @@
 		
 		var h = $( window ).height();
 
+        //Tabs on navbar sliding open and closed
 		$('.study-nav').hoverIntent(function(){
 			$(this).animate({width: "130px"}, 300);
 			$(this).children().fadeIn().css({display: "block"});
@@ -53,6 +76,7 @@
 			$(this).children().css({display: "none"});
 		});
 
+        //Sticky navbar at the top
 		$(function(){
 		  var
 			$win = $(window),
@@ -72,37 +96,34 @@
 		  });
 		});
 
-		function blink(time, interval){
-			var timer = window.setInterval(function(){
-				$(".circle").animate({opacity : 0},800);
-				window.setTimeout(function(){
-					$(".circle").animate({opacity : 1.0},1000);
-				}, 100);
-			}, interval);
-			window.setTimeout(function(){clearInterval(timer);}, time);
-		}
-		
-		blink(10000, 2000);
+        //smoothscroll is doing the scroll-to functions
+        /*$(".arrow").click(function() {
+            console.log("clickie");
+            var aTag = $("#two");
+            $('html,body').animate({scrollTop: aTag.offset().top});
+        });*/
 
-	   $('.navbar').scrollspy()
+	    $('.navbar').scrollspy()
 	});
-	
-	
+
 	</script>
   	<div class="container-fluid one block" id="one">
+        <img src="images/icecream-right.png" id="icecream" />
     	<div class="row-fluid">
         	<div class="span10 offset1">
                 <div class="folder1">
-                    <img src="images/jh-color.png">
-                    <h1>JARED HOFFMAN PORTFOLIO</h1>
+                    <h1>SWEET.</h1>
                     <p class="text">
-						Hey, you! I recently finished undergrad years at Cornell University in May, 2015, majoring in Information Science. I prefer to think of myself as a humanist who works in technology, and an ice cream connoisseur. Below are case studies for a few of my projects.
+						i recently graduated cornell university, then traded the dank recesses of upstate new york for sunny california. i majored in information science, which is basically the out of wedlock love-child of compsci and sociology.
+
+                        <br /><br />right now I'm working on a <a href="http://instagram.com/stonerscoloringbook/" target="_blank">coloring book</a>. 
+                        <br /><br />design and web dev work is over at <a href="http://www.behance.com/JaredH">Behance</a>.
                         <br /><br />
-                        <a href="jeh_resume.pdf" target="_blank">Resume</a> // <a href="http://www.behance.com/JaredH" target="_blank">Behance Page</a> // jeh366@cornell.edu
+                        <a href="jeh_resume.pdf" target="_blank">andd my resume.</a>
 <br /><br />
 Bon appetit!        
                     </p>
-                    <div class="circle"><a href="index.html#two"><div class="arrow">	</div></a></div>
+                    <div class="circle"><a href="#two" name="arrow"><div class="arrow">	</div></a></div>
                 </div>
             </div>
         </div>
@@ -118,7 +139,7 @@ Bon appetit!
                 <li class="study-nav1"><a href="index.html#three" class="study-nav" id="microgifts-nav"><span>MICROGIFTS</span></a></li>
                 <li class="study-nav1"><a href="index.html#four" class="study-nav" id="garza-nav"><span>GARZA</span></a></li>
                 <li class="study-nav1"><a href="index.html#five" class="study-nav" id="corn-nav"><span>CORNELLIOUS</span></a></li>
-                <li><a href="index.html#six">CV + CONTACT</a></li>
+                <li><a href="index.html#one">CV + CONTACT</a></li>
             </ul>
             </div>
         </div>
@@ -129,7 +150,7 @@ Bon appetit!
         <div class="row-fluid">
             <div class="span12">
                 <div class="detail tooskee" id="tooskee-folder">
-                    <img src="images/tooskee-logo.png" alt="Tooskee">
+                    <img src="images/tooskee/ss1-cut.png" alt="Tooskee" />
                     <p class="logger">Digitize your kitchen.</p>
                     <p><a class="visit-btn" href="tooskee.html">View Project</a><p>
                 </div>
@@ -171,15 +192,6 @@ Bon appetit!
         </div>
     </div>
     
-   	<div class="container-fluid six block" id="six">
-    	<div class="row-fluid fun">
-                <div class="span10 offset1">
-                    <img class="fun" src="images/fun.png" id="fun">
-                    <p class="quote">Alright, not as fun as an enormous ice cream sundae on a Sunday. Still, I hoped you liked the case studies (if you haven't clicked on them -- quick, turn around!) To see more of my work, check out my <a href="http://www.behance.com/JaredH" target="_blank">behance</a> page. Now here's the good part: I'm looking for a job in product management, design, or UI/UX. If you're interested, <a href="jeh_resume.pdf" target="_blank">download my resum&eacute;.</a></p>
-            </div>
-        </div>
-    </div>
-    
     <div class="container-fluid seven block" id="seven">
     	<div class="row-fluid contact">
         	<div class="span12">
@@ -187,6 +199,6 @@ Bon appetit!
             </div>
         </div>
     </div>
-    
+
   </body>
 </html>

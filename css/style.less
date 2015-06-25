@@ -38,6 +38,10 @@
 }
 
 
+@winWidth: `window.screen.availWidth`;
+@winHeight: `window.screen.availHeight`;
+
+
 /*Mixins*/
 .border-radius (@radius) {
   border-radius: @radius;
@@ -112,20 +116,28 @@ a:hover{
 
 /*Navbar --------------------------------- */
 /* Home Page ------------------------ */
+
 .one{
 	z-index:1;
-	background-color:#ebeff2;
-	background-image:url('triangle-background2.svg');
-	background-repeat: no-repeat;
-	background-position:0px 0px;
-	background-size:cover;
+	background-color:#ffffff;
+	@media (max-width:720px){
+		margin-left: 5px;
+	  	margin-right: 5px;
+			}
+	}
+
+#icecream{
+	position:absolute;
+	right: 0px;
+	width:auto;
+	z-index:999;
 }
 .detail{
 	text-align:center;
 }	
 
 .circle{
-	margin:20px auto;
+	margin:20px 0px;
 	width:50px;
 	height:50px;
 	border:1px solid transparent;
@@ -150,7 +162,7 @@ a:hover{
 }	
 
 .navbar{
-	z-index:9999999;
+	z-index:998;
 	width:100%;
 	display:block;
 	height:40px;
@@ -252,35 +264,27 @@ a:hover{
 }
 
 .folder1{
-	padding-top:5%;
+	padding-top:0%;
+	max-width:70%;
 	h1{
 		color:#3E4347;
 		padding-bottom:2%;	
-		font-size:3em;
-		text-align:center;
+		font-size:5em;
 		font-family:Novecento-demi;	
+		padding-top:50px;
 		@media (max-width:720px){
-			font-size:16pt;
+			font-size:3em;
 			margin-top:20px;
 		}
-	}
-	img{
-		width:100px;
-		height:100px;
-		display:block;
-		margin-left:auto;
-		margin-right:auto;	
-	}
-	
+	}	
 	.text{
 		font-size:1.2em;
+		font-variant:italic;
 		color:#3E4347;
-		text-align:center;
-		font-family:'Open Sans';
+		font-family:'Georgia';
 		font-weight:500;
 		-webkit-font-smoothing: antialiased;
 		line-height:150%;
-		@media (min-width:1000px){	padding:0px 150px;}
 
 	}
 }
@@ -337,15 +341,15 @@ a:hover{
 .two{
 	background-color:@tooskee-green;
 	z-index:5 !important;
-
-	img{
-		width:200px;
-		height:200px;
+	.detail{
+		margin-top:0px !important;
+	}
+	.logger{
+		margin-top:20px;
 	}
 	@media (max-width: 720px){
 		img{
-			width:140px !important;
-			height:140px !important;
+			width:200px !important;
 		}
 	}
 	.visit-btn{
